@@ -1,3 +1,6 @@
 *.exe
-.vscode/*
+.vscode/
 secret.py
+.env
+cpp/build/
+.venv/
