@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+    com.options.collector.plist
+    ===========================
+    launchd job for the nightly options collector.
+
+    Install:
+        1. Edit the two EDIT_ME paths below (search for EDIT_ME)
+        2. Copy to ~/Library/LaunchAgents/
+               cp python/com.options.collector.plist ~/Library/LaunchAgents/
+        3. Load it:
+               launchctl load ~/Library/LaunchAgents/com.options.collector.plist
+        4. Verify:
+               launchctl list | grep options
+
+    To unload:
+        launchctl unload ~/Library/LaunchAgents/com.options.collector.plist
+
+    Two triggers fire catchup_runner.sh:
+      A) Calendar: 16:35 ET Mon–Fri (if the Mac is awake at that time)
+      B) On wake:  immediately when the Mac wakes from sleep
+         catchup_runner.sh itself checks the ET time and skips if < 16:30.
+
+    If the Mac is asleep at 16:35, trigger A is skipped by macOS.
+    When you next open the lid, trigger B fires and catchup_runner.sh
+    picks up the same-day collection (as long as it's still today and >= 16:30).
+-->
+<plist version="1.0">
+<dict>
+
+    <key>Label</key>
+    <string>com.options.collector</string>
+
+    <!-- EDIT_ME: absolute path to catchup_runner.sh in your repo -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>EDIT_ME/python/catchup_runner.sh</string>
+    </array>
+
+    <!-- Fire at 16:35 ET Mon–Fri -->
+    <!-- Note: StartCalendarInterval uses LOCAL time. -->
+    <!-- If your Mac is set to ET, use Hour=16 Minute=35. -->
+    <!-- If your Mac is on another timezone, adjust accordingly. -->
+    <!-- The script's internal ET check is the authoritative guard. -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key><integer>1</integer>
+            <key>Hour</key><integer>16</integer>
+            <key>Minute</key><integer>35</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>2</integer>
+            <key>Hour</key><integer>16</integer>
+            <key>Minute</key><integer>35</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>3</integer>
+            <key>Hour</key><integer>16</integer>
+            <key>Minute</key><integer>35</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>4</integer>
+            <key>Hour</key><integer>16</integer>
+            <key>Minute</key><integer>35</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>5</integer>
+            <key>Hour</key><integer>16</integer>
+            <key>Minute</key><integer>35</integer>
+        </dict>
+    </array>
+
+    <!-- Wake-from-sleep trigger -->
+    <!-- macOS fires jobs with StartOnMount/after-sleep via this key -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- Stdout/stderr go to the repo's logs/ directory -->
+    <!-- EDIT_ME: absolute path to your repo's logs directory -->
+    <key>StandardOutPath</key>
+    <string>EDIT_ME/logs/launchd_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>EDIT_ME/logs/launchd_stderr.log</string>
+
+    <!-- Retry once on crash (not on clean exit) -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>ThrottleInterval</key>
+    <integer>300</integer>
+
+</dict>
+</plist>

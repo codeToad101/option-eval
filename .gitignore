@@ -4,3 +4,4 @@ secret.py
 .env
 cpp/build/
 .venv/
+python/__pycache__/

@@ -1,0 +1,4 @@
+# options collector pipeline dependencies
+ib_insync>=0.9.86
+pandas>=2.0.0
+pyarrow>=14.0.0

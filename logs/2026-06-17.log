@@ -1,0 +1,16 @@
+18:40:44  INFO     Run date: 2026-06-17  |  Expiries: ['2026-06-19', '2026-06-26', '2026-07-03', '2026-07-10', '2026-07-17', '2026-08-21']
+18:40:44  INFO     Tickers: ['SPY', 'QQQ', 'NVDA', 'TSLA', 'AMZN', 'GLD', 'TLT', 'IWM', 'MSTR', 'UVXY']
+18:40:44  ERROR    Cannot connect to ibkr_bridge at 127.0.0.1:19999 — is it running? ([Errno 61] Connect call failed ('127.0.0.1', 19999))
+18:43:04  INFO     Run date: 2026-06-17  |  Expiries: ['2026-06-19', '2026-06-26', '2026-07-03', '2026-07-10', '2026-07-17', '2026-08-21']
+18:43:04  INFO     Tickers: ['SPY', 'QQQ', 'NVDA', 'TSLA', 'AMZN', 'GLD', 'TLT', 'IWM', 'MSTR', 'UVXY']
+18:43:04  ERROR    Cannot connect to ibkr_bridge at 127.0.0.1:19999 — is it running? ([Errno 61] Connect call failed ('127.0.0.1', 19999))
+18:44:00  INFO     Run date: 2026-06-17  |  Expiries: ['2026-06-19', '2026-06-26', '2026-07-03', '2026-07-10', '2026-07-17', '2026-08-21']
+18:44:00  INFO     Tickers: ['SPY', 'QQQ', 'NVDA', 'TSLA', 'AMZN', 'GLD', 'TLT', 'IWM', 'MSTR', 'UVXY']
+18:44:00  ERROR    Cannot connect to ibkr_bridge at 127.0.0.1:19999 — is it running? ([Errno 61] Connect call failed ('127.0.0.1', 19999))
+18:46:52  INFO     Run date: 2026-06-17  |  Expiries: ['2026-06-19', '2026-06-26', '2026-07-03', '2026-07-10', '2026-07-17', '2026-08-21']
+18:46:52  INFO     Tickers: ['SPY', 'QQQ', 'NVDA', 'TSLA', 'AMZN', 'GLD', 'TLT', 'IWM', 'MSTR', 'UVXY']
+18:46:52  ERROR    Cannot connect to ibkr_bridge at 127.0.0.1:19999 — is it running? ([Errno 61] Connect call failed ('127.0.0.1', 19999))
+18:48:34  INFO     Run date: 2026-06-17  |  Expiries: ['2026-06-19', '2026-06-26', '2026-07-03', '2026-07-10', '2026-07-17', '2026-08-21']
+18:48:34  INFO     Tickers: ['SPY', 'QQQ', 'NVDA', 'TSLA', 'AMZN', 'GLD', 'TLT', 'IWM', 'MSTR', 'UVXY']
+18:48:34  INFO     Connected to ibkr_bridge at 127.0.0.1:19999
+18:48:34  INFO     [SPY] Starting collection (6 expiries)
