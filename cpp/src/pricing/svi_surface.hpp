@@ -288,9 +288,10 @@ public:
             params.r     = cfg_.risk_free_rate;
             params.q     = cfg_.dividend_yield;
             params.sigma = 0.0; // overwritten by solver
-            params.type  = (q.contract.right == OptionRight::Call)
-                         ? OptionType::Call
-                         : OptionType::Put;
+            params.right = params.right = q.contract.right;
+            // params.type  = (q.contract.right == OptionRight::Call)
+            //              ? OptionType::Call
+            //              : OptionType::Put;
 
             const IVResult ivr = solve_iv(params, q.mid_price, cfg_.iv_cfg);
 

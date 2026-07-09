@@ -17,6 +17,14 @@ add_executable(bs_pricer
     src/main.cpp
 )
 
+add_executable(validate_synthetic
+    src/validation/validate_synthetic.cpp
+)
+
+target_include_directories(validate_synthetic PRIVATE ${CMAKE_SOURCE_DIR})
+
+target_compile_features(validate_synthetic PRIVATE cxx_std_20)
+
 target_include_directories(bs_pricer PRIVATE
     ${CMAKE_SOURCE_DIR}/src
 )

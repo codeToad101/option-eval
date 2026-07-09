@@ -291,13 +291,17 @@ class IBSession:
 async def dispatch_async(session: IBSession, req: dict) -> dict:
     rid = req.get("id", 0)
     try:
+        log.info("dispatch start") #debugging hang
         method = req["method"]
         if method == "underlying_trade":
+            log.info("qualifying contract") #debugging hang
             data = await session.ib.qualifyContractsAsync(
                 Stock(req["symbol"], "SMART", "USD")
             )
+            log.info("qualified") #debugging hang
             contract = data[0] if data else Stock(req["symbol"], "SMART", "USD")
             [ticker] = await session.ib.reqTickersAsync(contract)
+            log.info("received ticker") #debugging hang
             import math, time
             price = ticker.last or ticker.close or float("nan")
             return {"id": rid, "ok": True, "data": {

@@ -1,0 +1,115 @@
+=== ZERO-NOISE: flat_calm ===
+[IV solver]  n=136  mean_err=0.011034  max_err=0.033494  rejected=0
+[SVI fit]  true: a=0.020000 b=0.080000 rho=-0.100000 m=0.000000 sigma=0.200000
+  expiry=2024-01-16  fit: a=0.019952 b=0.080160 rho=-0.094539 m=0.000643 sigma=0.200199  |da|=0.000048 |db|=0.000160 |drho|=0.005461  rmse_vol_pts=0.067286  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.019955 b=0.080150 rho=-0.094644 m=0.000630 sigma=0.200184  |da|=0.000045 |db|=0.000150 |drho|=0.005356  rmse_vol_pts=0.046020  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.019961 b=0.080132 rho=-0.094834 m=0.000608 sigma=0.200156  |da|=0.000039 |db|=0.000132 |drho|=0.005166  rmse_vol_pts=0.031878  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.019966 b=0.080115 rho=-0.095019 m=0.000586 sigma=0.200129  |da|=0.000034 |db|=0.000115 |drho|=0.004981  rmse_vol_pts=0.025372  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== REALISTIC-NOISE: flat_calm ===
+[IV solver]  n=136  mean_err=0.010983  max_err=0.042099  rejected=0
+[SVI fit]  true: a=0.020000 b=0.080000 rho=-0.100000 m=0.000000 sigma=0.200000
+  expiry=2024-01-16  fit: a=0.015313 b=0.088252 rho=-0.092694 m=-0.001507 sigma=0.235227  |da|=0.004687 |db|=0.008252 |drho|=0.007306  rmse_vol_pts=0.350571  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.025104 b=0.068556 rho=-0.132272 m=-0.005305 sigma=0.159578  |da|=0.005104 |db|=0.011444 |drho|=0.032272  rmse_vol_pts=0.234000  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.007036 b=0.104697 rho=-0.044112 m=0.009862 sigma=0.276438  |da|=0.012964 |db|=0.024697 |drho|=0.055888  rmse_vol_pts=0.143726  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.011078 b=0.099912 rho=0.030728 m=0.030897 sigma=0.248727  |da|=0.008922 |db|=0.019912 |drho|=0.130728  rmse_vol_pts=0.112120  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== ZERO-NOISE: steep_skew ===
+[IV solver]  n=136  mean_err=0.012911  max_err=0.041271  rejected=0
+[SVI fit]  true: a=0.030000 b=0.120000 rho=-0.350000 m=0.000000 sigma=0.150000
+  expiry=2024-01-16  fit: a=0.029961 b=0.120158 rho=-0.347060 m=0.000172 sigma=0.150128  |da|=0.000039 |db|=0.000158 |drho|=0.002940  rmse_vol_pts=0.063397  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.029962 b=0.120153 rho=-0.347122 m=0.000168 sigma=0.150123  |da|=0.000038 |db|=0.000153 |drho|=0.002878  rmse_vol_pts=0.043347  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.029964 b=0.120142 rho=-0.347235 m=0.000161 sigma=0.150116  |da|=0.000036 |db|=0.000142 |drho|=0.002765  rmse_vol_pts=0.030005  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.029966 b=0.120132 rho=-0.347345 m=0.000154 sigma=0.150108  |da|=0.000034 |db|=0.000132 |drho|=0.002655  rmse_vol_pts=0.023861  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== REALISTIC-NOISE: steep_skew ===
+[IV solver]  n=136  mean_err=0.012844  max_err=0.048723  rejected=0
+[SVI fit]  true: a=0.030000 b=0.120000 rho=-0.350000 m=0.000000 sigma=0.150000
+  expiry=2024-01-16  fit: a=0.025987 b=0.128858 rho=-0.325500 m=-0.000576 sigma=0.171789  |da|=0.004013 |db|=0.008858 |drho|=0.024500  rmse_vol_pts=0.337711  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.033124 b=0.111988 rho=-0.381845 m=-0.002520 sigma=0.133833  |da|=0.003124 |db|=0.008012 |drho|=0.031845  rmse_vol_pts=0.225661  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.024602 b=0.133600 rho=-0.296598 m=0.003995 sigma=0.174337  |da|=0.005398 |db|=0.013600 |drho|=0.053402  rmse_vol_pts=0.142205  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.024610 b=0.134284 rho=-0.257664 m=0.011608 sigma=0.171127  |da|=0.005390 |db|=0.014284 |drho|=0.092336  rmse_vol_pts=0.111322  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== ZERO-NOISE: high_curvature ===
+[IV solver]  n=136  mean_err=0.011556  max_err=0.041797  rejected=0
+[SVI fit]  true: a=0.015000 b=0.200000 rho=-0.250000 m=0.000000 sigma=0.080000
+  expiry=2024-01-16  fit: a=0.014984 b=0.200126 rho=-0.248579 m=0.000042 sigma=0.080039  |da|=0.000016 |db|=0.000126 |drho|=0.001421  rmse_vol_pts=0.064719  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.014985 b=0.200122 rho=-0.248606 m=0.000041 sigma=0.080038  |da|=0.000015 |db|=0.000122 |drho|=0.001394  rmse_vol_pts=0.044232  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.014985 b=0.200115 rho=-0.248657 m=0.000039 sigma=0.080037  |da|=0.000015 |db|=0.000115 |drho|=0.001343  rmse_vol_pts=0.030593  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.014986 b=0.200108 rho=-0.248706 m=0.000037 sigma=0.080035  |da|=0.000014 |db|=0.000108 |drho|=0.001294  rmse_vol_pts=0.024312  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== REALISTIC-NOISE: high_curvature ===
+[IV solver]  n=136  mean_err=0.011504  max_err=0.049210  rejected=0
+[SVI fit]  true: a=0.015000 b=0.200000 rho=-0.250000 m=0.000000 sigma=0.080000
+  expiry=2024-01-16  fit: a=0.014368 b=0.201610 rho=-0.248111 m=-0.000296 sigma=0.083000  |da|=0.000632 |db|=0.001610 |drho|=0.001889  rmse_vol_pts=0.329400  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.015778 b=0.197369 rho=-0.251105 m=-0.000171 sigma=0.077120  |da|=0.000778 |db|=0.002631 |drho|=0.001105  rmse_vol_pts=0.222895  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.014005 b=0.204060 rho=-0.241122 m=0.000631 sigma=0.083366  |da|=0.000995 |db|=0.004060 |drho|=0.008878  rmse_vol_pts=0.139191  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.013634 b=0.205874 rho=-0.227583 m=0.002122 sigma=0.084090  |da|=0.001366 |db|=0.005874 |drho|=0.022417  rmse_vol_pts=0.110002  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== ZERO-NOISE: low_vol_regime ===
+[IV solver]  n=136  mean_err=0.006865  max_err=0.025012  rejected=0
+[SVI fit]  true: a=0.005000 b=0.060000 rho=-0.150000 m=0.000000 sigma=0.120000
+  expiry=2024-01-16  fit: a=0.004955 b=0.060182 rho=-0.139376 m=0.001004 sigma=0.120260  |da|=0.000045 |db|=0.000182 |drho|=0.010624  rmse_vol_pts=0.096435  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.004960 b=0.060160 rho=-0.139633 m=0.000982 sigma=0.120222  |da|=0.000040 |db|=0.000160 |drho|=0.010367  rmse_vol_pts=0.065832  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.004969 b=0.060120 rho=-0.140092 m=0.000942 sigma=0.120153  |da|=0.000031 |db|=0.000120 |drho|=0.009908  rmse_vol_pts=0.045493  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.004977 b=0.060083 rho=-0.140523 m=0.000905 sigma=0.120089  |da|=0.000023 |db|=0.000083 |drho|=0.009477  rmse_vol_pts=0.036179  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== REALISTIC-NOISE: low_vol_regime ===
+[IV solver]  n=136  mean_err=0.007132  max_err=0.040035  rejected=0
+[SVI fit]  true: a=0.005000 b=0.060000 rho=-0.150000 m=0.000000 sigma=0.120000
+  expiry=2024-01-16  fit: a=0.004873 b=0.059742 rho=-0.148013 m=-0.000457 sigma=0.123188  |da|=0.000127 |db|=0.000258 |drho|=0.001987  rmse_vol_pts=0.487092  converged=1  arb_free=1
+  expiry=2024-02-01  fit: a=0.006226 b=0.056446 rho=-0.147915 m=0.000070 sigma=0.105545  |da|=0.001226 |db|=0.003554 |drho|=0.002085  rmse_vol_pts=0.333379  converged=1  arb_free=1
+  expiry=2024-03-02  fit: a=0.002760 b=0.066932 rho=-0.127189 m=0.000981 sigma=0.141345  |da|=0.002240 |db|=0.006932 |drho|=0.022811  rmse_vol_pts=0.191142  converged=1  arb_free=1
+  expiry=2024-04-01  fit: a=0.003032 b=0.066859 rho=-0.072396 m=0.010847 sigma=0.136179  |da|=0.001968 |db|=0.006859 |drho|=0.077604  rmse_vol_pts=0.152553  converged=1  arb_free=1
+[signals]  count=0  (expect ~0 at zero noise, scaling up with injected noise)
+
+=== STAGE 4: degenerate case handling ===
+  [deep ITM call, 1y]  true_sigma=0.200000  recovered=0.268001  converged=1  iters=21
+  [deep OTM call, 1y]  true_sigma=0.200000  recovered=0.000101  converged=1  iters=1
+  [ATM, 1 day]  true_sigma=0.200000  recovered=0.200000  converged=1  iters=2
+  [deep OTM put, 1 wk]  true_sigma=0.200000  recovered=0.000101  converged=1  iters=1
+
+=== STAGE 5: injected mispricing detection sweep ===
+bg_noise        offset(vp)  injected  detected false_pos   total_pts
+zero              0.500000        12         0         0         136
+zero              1.000000        12         0         0         136
+zero              2.000000        12         0         0         136
+zero              3.000000        12        12         0         136
+zero              5.000000        12        12         0         136
+zero              8.000000        12        12         0         136
+realistic         0.500000        12         0         0         136
+realistic         1.000000        12         0         0         136
+realistic         2.000000        12         0         0         136
+realistic         3.000000        12        12         0         136
+realistic         5.000000        12        12         0         136
+realistic         8.000000        12        12         0         136
+
+[note] detected/injected gives true-positive rate at each
+offset; false_pos should stay ~0. The offset where detected
+first reaches injected consistently is your practical
+detection threshold under that noise regime.
+
+=== SUMMARY (8 scenario runs) ===
+scenario                       n_pts      rej mean_iv_err max_iv_errmax_param_err   signals  converged
+ZERO-NOISE: flat_calm            136        0    0.011034   0.033494     0.005461         0        yes
+REALISTIC-NOISE: flat_calm       136        0    0.010983   0.042099     0.130728         0        yes
+ZERO-NOISE: steep_skew           136        0    0.012911   0.041271     0.002940         0        yes
+REALISTIC-NOISE: steep_skew      136        0    0.012844   0.048723     0.092336         0        yes
+ZERO-NOISE: high_curvature       136        0    0.011556   0.041797     0.001421         0        yes
+REALISTIC-NOISE: high_curvature     136        0    0.011504   0.049210     0.022417         0        yes
+ZERO-NOISE: low_vol_regime       136        0    0.006865   0.025012     0.010624         0        yes
+REALISTIC-NOISE: low_vol_regime     136        0    0.007132   0.040035     0.077604         0        yes
+
+worst max_iv_err across all scenarios:    0.049210
+worst max_param_err across all scenarios: 0.130728
+any non-converged fit:                     no
+
+[done] This table is your validation evidence. Screenshot it
+and cite the worst-case numbers, not the best-case ones.

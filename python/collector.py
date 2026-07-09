@@ -122,9 +122,13 @@ class BridgeClient:
             self._req_id += 1
             payload["id"] = self._req_id
             line = json.dumps(payload) + "\n"
+            log.info("SEND %s", payload) #debugging hang
             self._writer.write(line.encode())
+            log.info("step1") #debugging hang
             await self._writer.drain()
+            log.info("step2") #debugging hang
             resp_line = await self._reader.readline()
+            log.info("RECV %s", resp_line) #debugging hang
             return json.loads(resp_line.decode())
 
     async def underlying_trade(self, symbol: str) -> dict:
